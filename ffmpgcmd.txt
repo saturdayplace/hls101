@@ -1,0 +1,5 @@
+ffmpeg -i wecrashing.mp4 \
+\
+-hls_segment_filename 'crashing/high-%02d.ts' -hls_playlist_type vod -g 2 -framerate 24 crashing/high.m3u8 \
+ -hls_segment_filename 'crashing/med-%02d.ts' -hls_playlist_type vod -g 2 -framerate 24 -s 534x300 crashing/med.m3u8 \
+ -hls_segment_filename 'crashing/low-%02d.ts' -hls_playlist_type vod -g 2 -framerate 24 -s 320x180 crashing/low.m3u8 \
